@@ -1,60 +1,20 @@
 <odoo>
   <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="ufp_changes.list">
-      <field name="name">ufp_changes list</field>
-      <field name="model">ufp_changes.ufp_changes</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
--->
-
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="ufp_changes.action_window">
-      <field name="name">ufp_changes window</field>
-      <field name="res_model">ufp_changes.ufp_changes</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="ufp_changes.action_server">
-      <field name="name">ufp_changes server</field>
-      <field name="model_id" ref="model_ufp_changes_ufp_changes"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
-
-    <!-- Top menu item -->
-<!--
-    <menuitem name="ufp_changes" id="ufp_changes.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="ufp_changes.menu_1" parent="ufp_changes.menu_root"/>
-    <menuitem name="Menu 2" id="ufp_changes.menu_2" parent="ufp_changes.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="ufp_changes.menu_1_list" parent="ufp_changes.menu_1"
-              action="ufp_changes.action_window"/>
-    <menuitem name="Server to list" id="ufp_changes" parent="ufp_changes.menu_2"
-              action="ufp_changes.action_server"/>
--->
+    <template id="external_layout_header_inherit_cr" 
+            inherit_id="report.external_layout_header">
+            <xpath expr="//div[@class='header']" position="replace">
+                <div class="header">
+                      <img t-att-src="'/ufp_changes/static/img/header.png'" width="100%" />
+                </div>
+            </xpath>
+        </template>
+        <template id="external_layout_footer_inherit_cr" 
+            inherit_id="report.external_layout_footer">
+            <xpath expr="//div[@class='footer']" position="replace">
+                <div class="footer">
+                   <img t-att-src="'/ufp_changes/static/img/footer.PNG'" width="100%"/>
+                </div>
+            </xpath>
+        </template>
   </data>
 </odoo>
