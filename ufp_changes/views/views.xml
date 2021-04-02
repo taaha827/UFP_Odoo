@@ -11,7 +11,7 @@
         </template>
         <template id="external_layout_footer_inherit_cr" 
             inherit_id="web.external_layout_standard">
-            <xpath expr="//div[@class='footer']" position="replace">
+            <xpath expr="/div[2]" position="replace">
                 <div class="footer">
                    <img t-att-src="'/ufp_changes/static/img/footer.PNG'" width="100%"/>
                 </div>
